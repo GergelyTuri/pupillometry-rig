@@ -19,7 +19,14 @@ cs-c adapter
 
 IR filter
 ---------
-[NIR Bandpass Filter](https://machinevisionstore.com/catalog/details/898), 30.5 mm Thread Midwest Optical Filters 
+[FB850-10 Bandpass filter](https://www.thorlabs.com/thorproduct.cfm?partnumber=FB850-10), this only comes in 1" diameter so an adapter is needed for it (see 3d print file). Alternaively one can order a custom cut from Semrock. 
+
+this one did not work for me with 940 nm imaging: [NIR Bandpass Filter](https://machinevisionstore.com/catalog/details/898), 30.5 mm Thread Midwest Optical Filters 
+
+IR filter "adapter"
+-------------------
+see `.stl` file. Optimizet for TAZ filament printer with ABS.
+
 
 IR light source
 ---------------
