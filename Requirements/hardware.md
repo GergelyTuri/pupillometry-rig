@@ -35,7 +35,7 @@ IR light source
 
 visible light source
 --------------------
-i used plane blue LED (whatever i found) and an Arduino pin to drive it. The LED was covered with black tape and only a small hole on the tape let through light. 
+I used a plane blue LED (whatever I found) and an Arduino pin to drive it. The LED was covered with black tape and only a small hole on the tape let through light. 
 _Note_: most of the time 2p imaging is done in total darkness (except VR environments) which makes the pupil dilate completely. The visible light pre-constricts it. It is a problem if the visible light hits the detectors so make sure that the objective is shielded. 
       
 optional
