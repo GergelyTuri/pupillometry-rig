@@ -5,9 +5,10 @@ setup(
     version='1.0.0',
     description='measuring pupil size in mice',
     author='Gergely Turi',
-    author_email='gt2253@cumc.clumbia.edu',
+    author_email='gt2253@cumc.columbia.edu',
     url='https://github.com/GergelyTuri/pupillometry-rig',
-    packages=find_packages(),
+    package_dir={'': 'src'},
+    packages=find_packages(where='src'),
     install_requires=[
         # List your dependencies here
     ],
