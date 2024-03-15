@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='pupillometry-rig',
+    name='pupillometry',
     version='1.0.0',
     description='measuring pupil size in mice',
     author='Gergely Turi',
