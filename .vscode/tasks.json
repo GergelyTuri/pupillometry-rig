@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Upload Sketch",
+        "type": "shell",
+        "command": "arduino-cli",
+        "args": [
+          "upload",
+          "-p",
+          "COM4",  // Replace with your COM port
+          "--fqbn",
+          "arduino:avr:nano:cpu=atmega328old",  // Adjust for your board and processor
+          "${workspaceFolder}/Hardware\\Adruino\\HCTL2032_controller\\HCTL2032_controller.ino"  // Replace with the path to your sketch
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "detail": "Upload the sketch to the Arduino board"
+      }
+    ]
+  }
+  

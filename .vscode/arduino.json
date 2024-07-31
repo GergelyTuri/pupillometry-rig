@@ -1,0 +1,7 @@
+{
+    "port": "COM4",
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "programmer": "avrisp",
+    "sketch": "Hardware\\Adruino\\HCTL2032_controller\\HCTL2032_controller.ino"
+}

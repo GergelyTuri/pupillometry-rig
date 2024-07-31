@@ -53,12 +53,13 @@ unsigned char *pos8BitArr = (unsigned char *)(&curPos);
 unsigned long tMillis;
 unsigned long pMillis;
 
-StaticJsonBuffer<200> jsonBuffer;
-JsonObject& message = jsonBuffer.createObject();
-JsonObject& value = message.createNestedObject("position");
+StaticJsonDocument<200> jsonBuffer;
+JsonObject message = jsonBuffer.to<JsonObject>();
+JsonObject value = message.createNestedObject("position");
 
-JsonObject& lapResetMessage = jsonBuffer.createObject();
-JsonObject& lapRstVals = lapResetMessage.createNestedObject("lapReset");
+StaticJsonDocument<200> lapResetBuffer;
+JsonObject lapResetMessage = lapResetBuffer.to<JsonObject>();
+JsonObject lapRstVals = lapResetMessage.createNestedObject("lapReset");
 
 void setup()
 {
@@ -108,7 +109,7 @@ void loop()
       if(!lapLow)
       {
         lapResetMessage["millis"] = millis();
-        lapResetMessage.printTo(Serial);
+        serializeJson(lapResetMessage, Serial);
         Serial.println();
         lapLow=true;
       }
@@ -160,10 +161,9 @@ void loop()
   value["dy"] = diffPos;
   value["dt"] = diffT;
   message["millis"] = tMillis;
-  message.printTo(Serial);
+  serializeJson(message, Serial);
   Serial.println();
 
   prevPos = curPos;
   pMillis = millis();
-
 }
